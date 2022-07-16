@@ -1,6 +1,7 @@
 package com.example.githubrepos.di
 
 import com.example.githubrepos.BuildConfig
+import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -10,7 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-internal fun getNetworkModule() = module {
+fun getNetworkModule() = module {
     single { provideGson() }
     single { provideHttpLoggingInterceptor() }
     single { provideOkHttpClient(get()) }
@@ -32,6 +33,7 @@ private fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
 
 private fun provideGson() =
     GsonBuilder()
+        .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
         .setDateFormat(DEFAULT_DATE_FORMAT)
         .serializeNulls()
         .create()
