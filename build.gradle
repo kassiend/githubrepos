@@ -12,6 +12,7 @@ ext {
 
     retrofit = '2.9.0'
     coil = '2.1.0'
+    nav_component = '2.5.0'
     koin = '3.2.0'
     paging = '3.1.1'
     okhttpLoggingInterceptor = '4.9.0'
