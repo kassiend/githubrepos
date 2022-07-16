@@ -1,9 +1,8 @@
 package com.example.githubrepos.domain
 
-import retrofit2.http.GET
-import retrofit2.http.Query
+import com.example.githubrepos.domain.model.RepoPage
 
 interface GithubRepository {
 
-    suspend fun fetchData()
+    suspend fun fetchData(page: Int): RepoPage
 }
