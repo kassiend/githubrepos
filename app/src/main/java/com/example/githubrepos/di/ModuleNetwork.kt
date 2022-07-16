@@ -1,6 +1,5 @@
 package com.example.githubrepos.di
 
-import android.content.Context
 import com.example.githubrepos.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
