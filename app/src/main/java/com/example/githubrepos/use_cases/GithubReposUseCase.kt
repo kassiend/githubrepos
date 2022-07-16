@@ -12,7 +12,7 @@ class GithubReposUseCase {
     fun getPagedRepos(): Flow<PagingData<Repo>> {
         return Pager(
             config = PagingConfig(
-                pageSize = 100,
+                pageSize = 30,
                 enablePlaceholders = false
             ),
             pagingSourceFactory = { GithubPagingSource() }

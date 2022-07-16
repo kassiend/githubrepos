@@ -14,7 +14,7 @@ class GithubPagingSource : PagingSource<Int, Repo>(), KoinComponent {
     private val githubRepository: GithubRepository by inject()
 
     companion object {
-        private const val PAGE_SIZE = 100
+        private const val PAGE_SIZE = 30
         private const val INITIAL_PAGE = 0
     }
 
